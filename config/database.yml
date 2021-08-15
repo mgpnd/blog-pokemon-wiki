@@ -24,6 +24,10 @@ default: &default
 development:
   <<: *default
   database: pokemon_wiki_development
+  host: db
+  port: 5432
+  username: pokemon_wiki_rails_app
+  password: pokemon_wiki_rails_app
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
