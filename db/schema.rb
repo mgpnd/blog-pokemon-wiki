@@ -16,19 +16,18 @@ ActiveRecord::Schema.define(version: 2021_09_05_082412) do
   enable_extension "plpgsql"
 
   create_table "pokemons", force: :cascade do |t|
+    t.string "name", null: false
     t.string "type1"
     t.string "type2"
     t.integer "hp", null: false
     t.integer "attack", null: false
     t.integer "defense", null: false
     t.integer "special_attack", null: false
-    t.integer "special_defence", null: false
+    t.integer "special_defense", null: false
     t.integer "speed", null: false
     t.integer "total_score", null: false
     t.integer "generation", null: false
     t.boolean "legendary", default: false, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
